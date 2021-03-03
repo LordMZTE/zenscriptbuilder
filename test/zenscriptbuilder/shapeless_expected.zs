@@ -1,0 +1,2 @@
+craftingTable.addShapeless("shapeless_example_1",<item:minecraft:grass>,[<item:minecraft:wheat_seeds>,<item:minecraft:dirt>]);
+craftingTable.addShapeless("shapeless_example_2",<item:minecraft:grass>*8,[<item:minecraft:wheat_seeds>,<item:minecraft:dirt>,<item:minecraft:dirt>,<item:minecraft:dirt>,<item:minecraft:dirt>,<item:minecraft:dirt>,<item:minecraft:dirt>,<item:minecraft:dirt>,<item:minecraft:dirt>]);

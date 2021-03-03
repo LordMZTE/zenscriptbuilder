@@ -1,0 +1,12 @@
+{
+    "name": "zenscriptbuilder",
+    "license": "GPL",
+    "contributors": ["LordMZTE"],
+    "url": "https://github.com/lordmzte/zenscriptbuilder",
+    "tags": ["crafttweaker", "bindings", "minecraft", "script"],
+    "version": "0.1.0",
+    "description": "a library that can construct ZenScript scripts for crafttweaker",
+    "classPath": "src",
+    "releasenote": "initial release"
+}
+

@@ -1,0 +1,12 @@
+{
+    "indentation": {
+        "character": "    "
+    },
+    
+    "wrapping": {
+        "casePattern": {
+            "defaultWrap": "onePerLine",
+            "defaultLocation": "afterLast"
+        }
+    }
+}

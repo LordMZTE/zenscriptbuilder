@@ -1,0 +1,1 @@
+craftingTable.removeByName("minecraft:sugar_from_sugar_cane");craftingTable.removeRecipe(<item:minecraft:stick>);craftingTable.removeByModid("minecraft");craftingTable.removeByRegex("minecraft:.*_carpet");craftingTable.removeAll();

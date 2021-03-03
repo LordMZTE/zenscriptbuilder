@@ -1,0 +1,9 @@
+-cp src
+-cp test
+-main TestAll
+
+-lib utest
+
+-D UTEST_PRINT_TESTS
+
+--interp
