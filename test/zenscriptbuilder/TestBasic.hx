@@ -10,7 +10,7 @@ class TestBasic extends utest.Test {
         var zs = new Zenscript();
 
         zs.addShapeless("shapeless_example_1", "minecraft:grass", ["minecraft:wheat_seeds", "minecraft:dirt"]);
-        zs.addShapeless("shapeless_example_2", "minecraft:grass", [
+        zs.addShapeless("shapeless_example_2", {item:"minecraft:grass", count:8}, [
             "minecraft:wheat_seeds",
             "minecraft:dirt",
             "minecraft:dirt",
@@ -20,7 +20,7 @@ class TestBasic extends utest.Test {
             "minecraft:dirt",
             "minecraft:dirt",
             "minecraft:dirt"
-        ], 8);
+        ]);
 
         zs.separator = "\n";
 
@@ -43,11 +43,11 @@ class TestBasic extends utest.Test {
             ["minecraft:diamond", "minecraft:stick"]
         ]);
 
-        zs.addShaped("shaped_mirror_example_1", "minecraft:arrow", [
+        zs.addShaped("shaped_mirror_example_1", {item:"minecraft:arrow", count:2}, [
             ["minecraft:diamond", "minecraft:diamond"],
             ["minecraft:air", "minecraft:flint"],
             ["minecraft:air", "minecraft:flint"]
-        ], 2, true);
+        ], true);
 
         zs.separator = "\n";
 

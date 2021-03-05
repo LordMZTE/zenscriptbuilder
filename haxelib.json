@@ -7,6 +7,6 @@
     "version": "0.1.0",
     "description": "a library that can construct ZenScript scripts for crafttweaker",
     "classPath": "src",
-    "releasenote": "initial release"
+    "releasenote": "add IngredientArg and clean up API"
 }
 

@@ -34,19 +34,19 @@ class Zenscript {
         this.functions.push(func);
     }
 
-    public function addShapeless(recipeName:String, output:String, ingredients:Array<String>, outputCount:Int = 1) {
+    public function addShapeless(recipeName:String, output:IngredientArg, ingredients:Array<IngredientArg>) {
         this.addFunction(new RecipeFunction(new Ident("craftingTable"), "addShapeless", [
             new StringLiteral(recipeName),
-            IngredientLiteral.item(output, outputCount),
-            new ArrayLiteral(ingredients.map(i -> cast(IngredientLiteral.item(i), SyntaxElement)))
+            output,
+            new ArrayLiteral(ingredients.map(i -> cast(i, SyntaxElement)))
         ]));
     }
 
-    public function addShaped(recipeName:String, output:String, ingredients:Array<Array<String>>, outputCount:Int = 1, mirrored:Bool = false) {
+    public function addShaped(recipeName:String, output:IngredientArg, ingredients:Array<Array<IngredientArg>>, mirrored:Bool = false) {
         this.addFunction(new RecipeFunction(new Ident("craftingTable"), mirrored ? "addShapedMirrored" : "addShaped", [
             new StringLiteral(recipeName),
-            IngredientLiteral.item(output, outputCount),
-            new ArrayLiteral(ingredients.map(a -> cast(new ArrayLiteral(a.map(i -> cast(IngredientLiteral.item(i), SyntaxElement))), SyntaxElement)))
+            output,
+            new ArrayLiteral(ingredients.map(a -> cast(new ArrayLiteral(a.map(i -> cast(i, SyntaxElement))), SyntaxElement)))
         ]));
     }
 
@@ -62,7 +62,7 @@ class Zenscript {
         this.addFunction(new RecipeFunction(new Ident("craftingTable"), "removeByRegex", [new StringLiteral(regex)]));
     }
 
-    public function removeRecipe(ingredient:IngredientLiteral) {
+    public function removeRecipe(ingredient:IngredientArg) {
         this.addFunction(new RecipeFunction(new Ident("craftingTable"), "removeRecipe", [ingredient]));
     }
 
